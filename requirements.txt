@@ -1,3 +1,4 @@
+-f https://download.pytorch.org/whl/torch_stable.html
 alabaster==0.7.12
 albumentations==1.0.0
 asgiref==3.3.4
@@ -57,7 +58,7 @@ sphinxcontrib-serializinghtml==1.1.5
 sqlparse==0.4.1
 tifffile==2020.9.3
 timm==0.4.9
-torch==1.8.1
-torchvision==0.9.1
+torch==1.8.1+cpu 
+torchvision==0.9.1+cpu
 typing-extensions==3.10.0.0
 urllib3==1.26.5
