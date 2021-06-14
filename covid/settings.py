@@ -122,6 +122,7 @@ USE_TZ = True
 MEDIA_ROOT = os.path.join(BASE_DIR, 'covid19/media/')
 MEDIA_URL = '/media/'
 STATIC_URL = '/static/'
+STATIC_ROOT = os.path.join(BASE_DIR, 'covid19','static')
 STATICFILES_DIRS = [
     os.path.join(BASE_DIR, 'static'),
     
