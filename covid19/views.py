@@ -8,6 +8,7 @@ from django.contrib.auth.forms import UserCreationForm
 from django.contrib.auth import authenticate, login, logout
 from django.contrib import messages
 from .models import Contact
+from django.utils.datastructures import MultiValueDictKeyError
 
 
 import torch 
@@ -87,9 +88,14 @@ def registerPage(request):
     return render(request, 'register.html', context)
 
 
+
 def covidTest(request):
     if request.method == "POST":
-        file = request.FILES["imageFile"]
+      #  file = request.FILES["imageFile"]
+        try:
+            file = request.FILES["imageFile"]
+        except MultiValueDictKeyError:
+            return render(request, "covid.html")
         file_name = default_storage.save(file.name, file)
         file_url = default_storage.path(file_name)
         print(file_url) 
@@ -103,6 +109,7 @@ def covidTest(request):
         return render(request, 'covid.html', {"predictions": output})
     else:
         return render(request, "covid.html")
+
 
 def brain_stroke_pred(gender,age,hypertension,heart_disease,ever_married,work_type,residence_type,avg_glucose_level,smoking_status,height,weight):
     height = height/100
