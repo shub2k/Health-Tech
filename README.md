@@ -8,7 +8,7 @@ This repository is the source code of Health Tech which is an AI based Healtcare
 
 
 
-# Updates 
+# Updates :-
 
 ## June 14, 2021
 #### Fixed the bug while uploading images for prediction 
