@@ -11,5 +11,5 @@ This repository is the source code of Health Tech which is an AI based Healtcare
 # Updates 
 
 ### June 14, 2021
-### V1 :- Fixed the bug while uploading images for prediction 
-###       Covid model switched to resnet18d from previous resnet200d as git lfs has modified weights of 200d while uploading .
+### Fixed the bug while uploading images for prediction 
+### Covid model switched to resnet18d from previous resnet200d as git lfs has modified weights of 200d while uploading .
