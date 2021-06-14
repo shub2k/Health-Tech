@@ -8,9 +8,7 @@ import matplotlib.pyplot as plt
 import timm 
 import numpy as np
 from torchvision import transforms
-from glob import glob
-import gradio as gr
-import os 
+
 
 #from example import FeatureExtractor
 from Covid_pne import FeatureExtractor
