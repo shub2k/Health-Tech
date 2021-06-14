@@ -1,0 +1,152 @@
+{% extends 'home.html' %}
+{%block body%}
+<!DOCTYPE html>
+{% load static %}
+<html lang="en">
+<link rel="stylesheet" href="{% static 'css/base.css' %}">
+
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- <title>Services Section Using Bootstrap 4</title> -->
+    <link rel="stylesheet" href="{% static 'css/services.css' %}">
+    
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.11.2/css/all.min.css">
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.11.2/css/fontawesome.min.css">
+	<!-- <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.4.1/css/bootstrap.css"> -->
+	<link href="https://fonts.googleapis.com/css?family=Poppins:500,700&display=swap" rel="stylesheet">
+	<style>
+
+.social-menu i:before {
+	display: flex;
+  color: #36eaf3;
+	flex-flow: row nowrap;
+	align-items: center;
+        font-weight: 400;
+}
+    
+	@media screen and (max-width: 1100px) {
+  	.foot{
+    margin-left:15px;
+  	}
+  	.navbar {
+    margin-top : 20px;
+    display : contents;
+	}
+
+	.navbar button{
+	margin-left : 190px !important ;
+
+	}
+ 	.navbar ul {
+    margin-left : 32px !important ;
+    display: flex;
+    flex-direction: row;
+	} 
+
+	.navbar li{
+    margin-left : 0px !important ;
+	} 
+
+
+	.navbar a {
+    margin-top : 0px !important ;
+
+	}
+	.navbar .signin{
+    margin-left : 134px !important;
+    margin-bottom:20px;
+	}
+
+}
+
+
+</style>
+</head>
+<body>
+	
+	<section class="section-services">
+		<div class="container">
+			<div class="row justify-content-center text-center">
+				<div class="col-md-10 col-lg-8">
+					<div class="header-section">
+						<h2 class="title"> Our <span>Services</span></h2>
+						<p class="description">We provide health-related services such as medical imaging we do disease classification using x-rays , ct scans etc , we also provide health and safety precautions by predicting
+						 the chances of having any chronic disease using tabular data .</p>
+					</div>
+				</div>
+			</div>
+			<div class="row">
+				<!-- Start Single Service -->
+
+				<!-- / End Single Service -->
+				<!-- Start Single Service -->
+				<div class="col-md-6 col-lg-4">
+					<div class="single-service">
+						<div class="part-1">
+							<!-- <i class="fab fa-pneumonia"></i> -->
+							<h3 class="title">Pneumonia and Covid testing through X-Ray Image</h3>
+						</div>
+						<div class="part-2">
+							<p class="description">Here you can test yourself for covid & Pneumonia using your xray .</p>
+							<a href="/covidTest"><i class="fas fa-arrow-circle-right"></i>Click For Testing </a>
+						</div>
+
+					</div>
+				</div>
+				<div class="col-md-6 col-lg-4">
+					<div class="single-service">
+						<div class="part-1">
+							<!-- <i class="fab fa-pneumonia"></i> -->
+							<h3 class="title">Brain Stroke  </h3>
+							<br>
+						</div>
+						<div class="part-2">
+							<p class="description">We provide early detection of brain stroke here just test it here .</p>
+							<a href="/brain_stroke"><i class="fas fa-arrow-circle-right"></i>Click For Testing </a>
+						</div>
+
+					</div>
+				</div>
+				{% comment %} <div class="col-md-6 col-lg-4">
+					<div class="single-service">
+						<div class="part-1">
+							<!-- <i class="fab fa-pneumonia"></i> -->
+							<h3 class="title">Heart Attack  </h3>
+						</div>
+						<div class="part-2">
+							<p class="description">Here you can test yourself for heart attack.</p>
+							<a href="#"><i class="fas fa-arrow-circle-right"></i>Click For Testing </a>
+						</div>
+
+					</div>
+				</div> {% endcomment %}
+
+				<!-- / End Single Service -->
+				<!-- Start Single Service -->
+				<!-- <div class="col-md-6 col-lg-4">
+					<div class="single-service">
+						<div class="part-1">
+							<i class="fas fa-award"></i>
+							<h3 class="title">Service provider provide organizations consulting</h3>
+						</div>
+						<div class="part-2">
+							<p class="description">Express delivery inno service effective logistics solution for delivery of small cargo delivery service.</p>
+							<a href="#"><i class="fas fa-arrow-circle-right"></i>Read More</a>
+						</div>
+					</div>
+				</div> -->
+				<!-- / End Single Service -->
+				
+				<!-- / End Single Service -->
+			</div>
+		</div>
+
+
+
+	</section>
+
+</body>
+</html>
+
+{%endblock body%}

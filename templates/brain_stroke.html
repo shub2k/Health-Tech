@@ -1,0 +1,149 @@
+{% extends 'home.html' %}
+{%block body%} 
+
+{% load static %}
+
+{%block header%}
+{%endblock header%}
+<link rel="stylesheet" href="{% static 'css/base.css' %}">
+<style>
+  .content {
+    max-width: 500px;
+    margin: auto;
+    }
+  
+  
+.socials a:hover{
+  color: aqua;
+}
+
+  
+@media screen and (max-width: 1100px) {
+  .foot{
+    margin-left:15px;
+  }
+  .navbar {
+    margin-top : 20px;
+    display : contents;
+}
+
+.navbar button{
+  margin-left : 190px !important ;
+
+}
+ .navbar ul {
+    margin-left : 32px !important ;
+    display: flex;
+    flex-direction: row;
+} 
+
+.navbar li{
+    margin-left : -10px !important ;
+} 
+
+
+.navbar a {
+    margin-top : 0px !important ;
+
+}
+.navbar .signin{
+    margin-left : 134px !important;
+    margin-bottom:20px;
+}
+
+}
+</style>
+
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<script src="https://kit.fontawesome.com/47101d2035.js" crossorigin="anonymous"></script>
+
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
+    integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+  
+
+  <style>
+    .center {
+      position: absolute;
+      text-align: center;
+      left: 50%;
+      top: 50%;
+      transform: translate(-50%, -50%);
+      font-family: Arial, Helvetica, sans-serif;
+      background-color: rgb(230, 239, 245);
+    }
+  </style>
+</head>
+
+
+  <h1 style="color:rgb(255,0,0); font-weight: 700; text-align:center;">
+    <i class="fas fa-brain "></i> Brain Stroke Prediction 
+  </h1>
+
+  <p style="color:rgb(51, 51, 83); font-weight:700; text-align:center;">
+    Can you have brain stroke in future ? test it now or never 
+  </p>
+
+  <form action="brain_stroke_result" >
+    {% csrf_token %}
+
+    <div class="form-group"  >
+      <input class="form-control" style="text-align:center; width:50%; align-items:center; margin:auto;justify-content:center;" placeholder="Sex (0 for Male, 1 for Female , 2 for other)" required type="text" name="Gender">
+    </div>
+
+
+    <div class="form-group" style="align-items:center; justify-content:center;">
+      <input class="form-control" style="text-align:center; width:50%; align-items:center; margin:auto;justify-content:center;" placeholder="Age" required type="text" name="age">
+    </div>
+
+
+    <div class="form-group" style="align-items:center; justify-content:center;">
+      <input class="form-control"  style="text-align:center; width:50%; align-items:center;margin:auto; justify-content:center;" placeholder="Hypertension ( 0 for No , 1 for Yes )" required type="text" name="hypertension">
+    </div>
+
+
+    <div class="form-group" >
+      <input class="form-control" style="text-align:center; width:50%; align-items:center; margin:auto;justify-content:center;" placeholder="Suffered from heart disease ever ( 0 for No 1 for yes )" required type="text" name="heart_disease">
+    </div>
+
+
+    <div class="form-group" >
+      <input class="form-control" style="text-align:center; width:50%; align-items:center; margin:auto;justify-content:center;" placeholder="Ever married ( 0 for No 1 for yes )" type="text" required name="ever_married">
+    </div>
+
+
+    <div class="form-group" >
+      <input class="form-control" style="text-align:center; width:50%; align-items:center; margin:auto;justify-content:center;" placeholder="Work Type (govt_job = 0 , never_worked = 1, private = 2 , self_employed = 3)" required type="text" name="work_type">
+    </div>
+
+    <div class="form-group" >
+      <input class="form-control" style="text-align:center; width:50%; align-items:center; margin:auto;justify-content:center;" placeholder="Residence Type ( rural = 0 , urban = 1)" required type="text" name="residence_type">
+    </div>
+
+
+    <div class="form-group">
+      <input class="form-control" style="text-align:center; width:50%; align-items:center; margin:auto;justify-content:center;" placeholder="Average Glucose Level" required type="text" name="avg_glucose_level">
+    </div>
+
+
+    <div class="form-group">
+      <input class="form-control" style="text-align:center; width:50%; align-items:center; margin:auto;justify-content:center;" placeholder="Smoking Status (unknown = 0 , formerly_smokes = 1 , never_smokes = 2 , smokes = 3)" required type="text" name="smoking_status">
+    </div>
+
+    <div class="form-group" >
+      <input class="form-control"  style="text-align:center; width:50%; align-items:center;margin:auto; justify-content:center;" placeholder="Height in cm" required type="text" name="height">
+    </div>
+
+    <div class="form-group" >
+      <input class="form-control" style="text-align:center; width:50%; align-items:center;margin:auto; justify-content:center;" placeholder="Weight in Kilogram" required type="text" name="weight">
+    </div>
+
+    
+
+    <input class="btn btn-primary btn-lg btn-block" type="submit" value='Predict'>
+
+  </form>
+
+{%endblock body%}
+

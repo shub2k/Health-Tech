@@ -1,0 +1,247 @@
+{% extends 'home.html' %}
+{%block body%}
+
+{%block header%}
+{%endblock header%}
+{% load static %}
+<link rel="stylesheet" href="{% static 'css/base.css' %}">
+<html lang='en'>
+<head>
+    <link rel="stylesheet" href="{% static 'css/about.css' %}">
+    
+ 
+    <!DOCTYPE html>
+    <html>
+    <head>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <style>
+    body {
+      font-family: Arial, Helvetica, sans-serif;
+      margin: 0;
+    }
+
+
+    
+    html {
+      box-sizing: border-box;
+    }
+    
+    *, *:before, *:after {
+      box-sizing: inherit;
+    }
+    
+    .column {
+      float: left;
+      width: 37.3%;
+      margin-bottom: 16px;
+      padding: 0 8px;
+    }
+
+    .column-2{
+      margin-left:65px;
+
+    }
+    
+    .card {
+      box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+      margin: 8px;
+    }
+    
+    .about-section {
+      padding: 50px;
+      text-align: center;
+      background-color: #474e5d;
+      color: white;
+      width:99%;
+      margin-left:7px;
+    }
+    
+    .row{
+        width:1070px;
+        margin-left:300px;
+    }
+    .container {
+      padding: 0 16px;
+      height:38vh;
+    
+    }
+    .card img{
+        height:32vh;
+        width:27vh;
+    }
+    .container::after, .row::after {
+      content: "";
+      clear: both;
+      display: table;
+    }
+    
+    .title {
+      color: grey;
+    }
+    
+    .button {
+      border: none;
+      outline: 0;
+      display: inline-block;
+      padding: 8px;
+      color: white;
+      background-color: #000;
+      text-align: center;
+      cursor: pointer;
+      width: 100%;
+    }
+    
+    .button:hover {
+      background-color: #555;
+    }
+
+    .social-menu {
+	display: flex;
+	list-style-type: none;
+  margin-left: 28px;
+  color: aqua;
+}
+ 
+.social-menu i {
+	color: #77bde0;
+	width: 40px;
+	height: 40px;
+	border-radius: 50%;
+	font-size: 25px;
+	margin-right: 10px;
+	transition: all 0.2s ease-in-out;
+	display: flex;
+	justify-content: center;
+  color: #36eaf3;
+}
+
+.social-menu i:before {
+	display: flex;
+  color: #36eaf3;
+	flex-flow: row nowrap;
+	align-items: center;
+        font-weight: 400;
+}
+
+.social-menu a {
+	text-decoration: none;
+}
+
+@media screen and (max-width: 1100px) {
+  .foot{
+    margin-left:15px;
+  }
+  .navbar {
+    margin-top : 20px;
+    display : contents;
+}
+
+.navbar button{
+  margin-left : 190px !important ;
+
+}
+ .navbar ul {
+    margin-left : 32px !important ;
+    display: flex;
+    flex-direction: row;
+} 
+
+.navbar li{
+    margin-left : 0px !important ;
+} 
+
+
+.navbar a {
+    margin-top : 0px !important ;
+
+}
+.navbar .signin{
+    margin-left : 134px !important;
+    margin-bottom:20px;
+}
+
+}
+@media screen and (max-width: 1100px) {
+      .column {
+        width: 100%;
+        display: block;
+        margin-left: 0px;
+      }
+      .row{
+        width: 108%;
+        display: block;
+        margin-left: -17px;
+      }
+      .about-section{
+        width: 104%;
+        display: block;
+        margin-left: -17px;
+      }
+    }
+    </style>
+    </head>
+    <body>
+    
+    
+    
+    <div class="about-section">
+      <h1>About Team</h1>
+      <p>We are final year university students and passionate learners .</p>
+      <p>We are trying to utilize the power of AI , more specifically computer vision in our task to perform classification ,segmentation , object-detection etc 
+       we have more such innovative ideas and we are capable to do so , we also have experience in natural language processing and have innovative ideas on that too this is just a demonstration of our capabilities.</p>
+    </div>
+    
+
+    <div class="row">
+      <div class="column column-1">
+        <div class="card">
+          <img src="{%static 'image/shub2.jpg' %}" alt="Jane" style="width:100%">
+          <div class="container-fluid">
+            <h2>Shubham Thapa</h2>
+            <p class="title">Founder and CEO of HealthTech</p>
+            <p>I am a computer vision and nlp researcher and developer , 
+            i was resposible for the deeplearning and machine learning model development and deployment in this project .</p>
+            <ul class="social-menu"> 
+                <li><a href="https://www.facebook.com/shubham.thapa.5249"><i class="fab fa-facebook"></i></a></li>
+                <li><a href="https://www.linkedin.com/in/shubham-thapa-2324841b3/"><i class="fab fa-linkedin"></i></a></li> 
+                <li><a href="https://twitter.com/Shubham65676765"><i class="fab fa-twitter"></i></a></li>
+                <li><a href="https://www.instagram.com/shubham_thapa8/"><i class="fab fa-instagram"></i></a></li> 
+    
+            </ul>
+          </div>
+        </div>
+      </div>
+    
+      <div class="column column-2">
+        <div class="card">
+          <img src="{%static 'image/suraj.png' %}" alt="Mike" style="width:100%">
+          <div class="container-fluid">
+            <h2>Suraj Kumar</h2>
+            <p class="title">Founder and CEO of HealthTech</p>
+            <p> I am a Fullstack Developer.I work as an Frontend Developer as well as Backend Developer in this project. And
+              contributing my thought in MAKE IN INDIA campaign. </p>
+            <ul class="social-menu social"> 
+                <li><a href="https://www.facebook.com/profile.php?id=100008757754774"><i class="fab fa-facebook"></i></a></li>
+                <li><a href="https://www.linkedin.com/in/suraj-kumar-yadav-0653a01b1/"><i class="fab fa-linkedin"></i></a></li> 
+                <li><a href="https://twitter.com/"><i class="fab fa-twitter"></i></a></li>
+                <li><a href="https://www.instagram.com/suraj6736/"><i class="fab fa-instagram"></i></a></li> 
+    
+            </ul>
+          </div>
+        </div>
+      </div>
+      
+      
+    </div>
+    
+    </body>
+    </html>
+  
+  {%block footer%}
+  <style>
+
+  </style>
+  {%endblock footer%}
+    
+{%endblock body%}
+
