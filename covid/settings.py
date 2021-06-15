@@ -124,13 +124,14 @@ USE_TZ = True
 MEDIA_ROOT = os.path.join(BASE_DIR, 'covid19/media/')
 MEDIA_URL = '/media/'
 
-STATIC_URL = '/static/'
 #STATIC_ROOT = os.path.join(BASE_DIR, 'covid19','static')
-STATICFILES_DIRS = [
+STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles')
+STATIC_URL = '/static/'
+STATICFILES_DIRS = (
     os.path.join(BASE_DIR, 'static'),
+)
     
-]
-STATIC_ROOT = os.path.join(BASE_DIR,"live-static-files","static-root")
+
 
 
 STATICFILES_STORAGE = 'whitenoise.storage.CompressedManifestStaticFilesStorage'
