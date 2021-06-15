@@ -181,10 +181,10 @@ class Prediction:
                 ])
 
         
-        model = timm.create_model("resnet200d", pretrained=False)
-        num_features = model.fc.in_features
-        model.fc = nn.Linear(num_features, 3)
-        model.load_state_dict(torch.load('covid19/deep_learning_models/Covid_classifier_resnet200d_fold0_validf10.9879976498710269.pth',map_location = 'cpu'))
+        model = timm.create_model('tf_efficientnet_b0_ns',pretrained = False)
+        num_features = model.classifier.in_features
+        model.classifier = nn.Linear(num_features, 3)
+        model.load_state_dict(torch.load('covid19/deep_learning_models/Covid_classifier_tf_efficientnet_b0_ns_fold0_validf10.9897097350755854.pth',map_location = 'cpu'))
         model.to(device)
         predi = ''
         
@@ -208,8 +208,10 @@ class Prediction:
         new_image = np.float32(new_image) / 255
         new_image = cv2.cvtColor(new_image, cv2.COLOR_BGR2RGB)
         input_img = preprocess_image(new_image)
-        grad_cam = GradCam(model=model, feature_module=model.layer4,
-                   target_layer_names=["2"], use_cuda=use_cuda)
+        
+        # 6 layer [ grad cam ]
+        grad_cam = GradCam(model=model, feature_module=model.blocks,
+                            target_layer_names=["6"], use_cuda=use_cuda)
         target_category = None
         grayscale_cam , output = grad_cam(input_img, target_category)
 
