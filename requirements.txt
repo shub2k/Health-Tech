@@ -7,6 +7,7 @@ bootstrap-py==1.0.2
 catboost==0.26
 certifi==2021.5.30
 chardet==4.0.0
+colorama==0.4.4
 cycler==0.10.0
 dataclasses==0.8
 decorator==4.4.2
@@ -18,6 +19,7 @@ GitPython==3.1.17
 graphviz==0.16
 gunicorn==20.1.0
 idna==2.10
+imageio==2.9.0
 imagesize==1.2.0
 Jinja2==3.0.1
 kiwisolver==1.3.1
@@ -31,6 +33,7 @@ pandas==1.1.5
 pguard==0.4.0
 pickle-mixin==1.0.2
 Pillow==8.2.0
+plotly==4.14.3
 Pygments==2.9.0
 pyparsing==2.4.7
 python-dateutil==2.8.1
@@ -39,6 +42,8 @@ PyWavelets==1.1.1
 PyYAML==5.4.1
 requests==2.25.1
 retrying==1.3.3
+scikit-image==0.17.2
+scipy==1.5.4
 six==1.16.0
 smmap==4.0.0
 snowballstemmer==2.1.0
@@ -50,6 +55,7 @@ sphinxcontrib-jsmath==1.0.1
 sphinxcontrib-qthelp==1.0.3
 sphinxcontrib-serializinghtml==1.1.5
 sqlparse==0.4.1
+tifffile==2020.9.3
 timm==0.4.9
 torch==1.8.1+cpu 
 torchvision==0.9.1+cpu
