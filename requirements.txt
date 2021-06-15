@@ -56,7 +56,7 @@ sphinxcontrib-serializinghtml==1.1.5
 sqlparse==0.4.1
 tifffile==2020.9.3
 timm==0.4.9
-https://download.pytorch.org/whl/cpu/torch-1.1.0-cp37-cp37m-linux_x86_64.whl
-https://download.pytorch.org/whl/cpu/torchvision-0.3.0-cp37-cp37m-linux_x86_64.whl
+https://download.pytorch.org/whl/cpu/torch-1.1.0-cp36-cp36m-linux_x86_64.whl
+torchvision==0.2.2
 typing-extensions==3.10.0.0
 urllib3==1.26.5
