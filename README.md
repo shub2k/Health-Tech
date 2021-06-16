@@ -6,6 +6,16 @@ This repository is the source code of Health Tech which is an AI based Healtcare
 ### 2. Early Detection of chronic diseases such as brainstoke / Heart attack through your daily diet / habbits 
 ### 3. Disease localization in your body 
 
+# How to check :- 
+#### Step 1. Go to services 
+#### Step 2. Choose any service
+#### Step 3. Suppose you choose covid detection then select to choose file option 
+<img src = "covid19/pred_covid_img/process1.png"/>
+
+#### Step 4. Click on upload and you will get the result 
+<img src = "covid19/pred_covid_img/process3.png"/>
+
+
 
 
 # Updates :-
