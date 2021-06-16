@@ -184,7 +184,7 @@ class Prediction:
         model = timm.create_model('tf_efficientnet_b0_ns',pretrained = False)
         num_features = model.classifier.in_features
         model.classifier = nn.Linear(num_features, 3)
-       # model.load_state_dict(torch.load('covid19/deep_learning_models/Covid_classifier_tf_efficientnet_b0_ns_fold0_validf10.9897097350755854.pth',map_location = 'cpu'))
+        model.load_state_dict(torch.load('covid19/deep_learning_models/Covid_classifier_tf_efficientnet_b0_ns_fold0_validf10.9897097350755854.pth',map_location = 'cpu'))
         model.to(device)
         predi = ''
         
