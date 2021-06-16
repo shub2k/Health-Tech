@@ -121,23 +121,24 @@ USE_TZ = True
 
 # Static files (CSS, JavaScript, Images)
 # https://docs.djangoproject.com/en/3.1/howto/static-files/
-MEDIA_ROOT = os.path.join(BASE_DIR, 'covid19/media/')
-MEDIA_URL = '/media/'
+STATIC_URL = '/static/'
+MEDIA_URL = '/images/'
 
 #STATIC_ROOT = os.path.join(BASE_DIR, 'covid19','static')
-STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles')
-STATIC_URL = '/static/'
-STATICFILES_DIRS = (
-    os.path.join(BASE_DIR, 'static'),
-)
+#STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles')
+S#TATIC_URL = '/static/'
+STATICFILES_DIRS = [
+    BASE_DIR / 'static'
+]
     
 
-
+MEDIA_ROOT = BASE_DIR / 'static/images'
+STATIC_ROOT = BASE_DIR / 'staticfiles'
 
 #STATICFILES_STORAGE = 'whitenoise.storage.CompressedManifestStaticFilesStorage'
 
-MEDIA_URL = '/images/'
-MEDIA_ROOT = os.path.join(BASE_DIR, 'images')
+#MEDIA_URL = '/images/'
+#MEDIA_ROOT = os.path.join(BASE_DIR, 'images')
 
 MESSAGE_TAGS = {
     messages.ERROR: 'danger'
