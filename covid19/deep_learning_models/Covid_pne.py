@@ -187,7 +187,8 @@ class Prediction:
         num_features = model.classifier.in_features
         model.classifier = nn.Linear(num_features, 3)
         model_path = os.path.join(settings.MODELS,'effnet_b0_ns_0.989.pth')
-        model.load_state_dict(torch.load(model_path,map_location=lambda storage, loc: storage))
+        print(f" This is model weights path {model_path}")
+        model.load_state_dict(torch.load(model_path,map_location='cpu'))
         model.to(device)
         predi = ''
         
