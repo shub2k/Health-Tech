@@ -1211,17 +1211,17 @@ p{
     <br>
     <h1 class = 'fas fa-skull pre' style="color: rgb(255, 0, 0); font-weight: 900; font-size: 46px;margin-left:500px; font-weight: 800;"> {{predictions}}</h1>
     <br>
-    <img src="{% static 'image/cam.jpg'%}" width="600" height="450" style="margin-left:450px;margin-bottom:20px; font-weight: 800;">
+    {% comment %} <img src="{% static 'image/cam.jpg'%}" width="600" height="450" style="margin-left:450px;margin-bottom:20px; font-weight: 800;"> {% endcomment %}
     {%elif predictions == 'Yes you have pneumonia' %}
     <br>
     <h1 class = 'fas fa-x-ray pre' style="color: rgb(255,105,180); font-weight: 900; font-size: 46px;margin-left:500px; font-weight: 800;"> {{predictions}}</h1>
     <br>
-    <img src="{% static 'image/cam.jpg'%}" width="600" height="450" style="margin-left:450px;margin-bottom:20px; font-weight: 800;">
+    {% comment %} <img src="{% static 'image/cam.jpg'%}" width="600" height="450" style="margin-left:450px;margin-bottom:20px; font-weight: 800;"> {% endcomment %}
     {% elif predictions == 'You are fine just stay healthy' %}
     <br>
     <h1 class = 'fas fa-shield-alt pre' style="color: rgb(50,205,50);font-size: 36px;font-size: 46px; font-weight: 900; margin-left:500px; font-weight: 800;"> {{predictions}}</h1>
     <br>
-    <img src="{% static 'image/cam.jpg'%}" width="600" height="450" style="margin-left:450px;margin-bottom:20px; font-weight: 800;">
+    {% comment %} <img src="{% static 'image/cam.jpg'%}" width="600" height="450" style="margin-left:450px;margin-bottom:20px; font-weight: 800;"> {% endcomment %}
     {% else %}
     
     {% endif %}
