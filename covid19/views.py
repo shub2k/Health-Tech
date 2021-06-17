@@ -9,7 +9,7 @@ from django.contrib.auth import authenticate, login, logout
 from django.contrib import messages
 from .models import Contact
 from django.utils.datastructures import MultiValueDictKeyError
-
+from django.conf import settings
 
 import torch 
 import torch.nn as nn 

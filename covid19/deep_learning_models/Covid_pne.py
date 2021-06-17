@@ -10,6 +10,8 @@ import cv2
 import timm 
 import numpy as np
 from torchvision import transforms
+import os 
+from django.conf import settings
 
 
 
@@ -184,7 +186,8 @@ class Prediction:
         model = timm.create_model('tf_efficientnet_b0_ns',pretrained = False)
         num_features = model.classifier.in_features
         model.classifier = nn.Linear(num_features, 3)
-       # model.load_state_dict(torch.load('covid19/deep_learning_models/Model weights/Covid_classifier_tf_efficientnet_b0_ns_fold0_validf10.9897097350755854.pth',map_location = 'cpu'))
+        model_path = os.path.join(settings.MODELS,'effnet_b0_ns_0.989.pth')
+        model.load_state_dict(torch.load(model_path,map_location=lambda storage, loc: storage))
         model.to(device)
         predi = ''
         
