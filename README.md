@@ -22,7 +22,7 @@ This repository is the source code of Health Tech which is an AI based Healtcare
 
 ## June 14, 2021
 #### > Fixed the bug while uploading images for prediction 
-#### > Covid model switched to resnet18d from previous resnet200d as git lfs has modified the weights of 200d while uploading .
+#### > Covid model switched to resnet18d from previous resnet200d as heroku gives 500 mb worth of slug size and the quota was exceding upto 800 mb .
 
 ## June 16 , 2021
 #### > Covid model switched to efficientnet_b0 from previous resnet18d . 
